@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SURREAL HANDS — A Digital Art Installation</title>
+    <meta name="description" content="Draw with your hands. Watch reality melt." />
+
+    <!-- Elegant typography from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--
+      MediaPipe Hands loaded via CDN.
+      The npm package (@mediapipe/hands) provides JS bindings,
+      but the WASM runtime and model weights are fetched via locateFile()
+      pointing to this CDN — this avoids WASM bundling complexity with Vite.
+    -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1646424915/hands.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body, #root { width: 100%; height: 100%; overflow: hidden; background: #080808; }
+      body { cursor: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
