@@ -1,33 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+@import "tailwindcss";
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-html, body, #root {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: #f5f5f3;
-}
-
-/* Hide cursor on canvas areas; restore it on interactive elements */
-body { cursor: none; user-select: none; -webkit-user-select: none; }
-button, a { cursor: pointer !important; }
-
-/* Very subtle paper grain via repeating gradient */
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-  opacity: 0.022;
-  pointer-events: none;
-  z-index: 9999;
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
 }

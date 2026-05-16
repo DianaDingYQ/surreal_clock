@@ -1,0 +1,10 @@
+{
+  "name": "Surreal Hands",
+  "description": "An experimental interactive art experience using real-time camera, hand gesture recognition, and liquid mirror clocks.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
